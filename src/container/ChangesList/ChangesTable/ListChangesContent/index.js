@@ -8,7 +8,7 @@ import { GlobalContext } from "../../../../store/GlobalState";
 const ListChangesContent = (props) => {
     const { filters, sorts } = React.useContext(GlobalContext);
 
-    const getDescAndAscList = (urlName,name,listFiltered) => {
+    const getDescAndAscList = (urlName, name, listFiltered) => {
         if (sorts[`${urlName}`] === "ASC") {
             return listFiltered.sort(function (a, b) {
                 var textA = a[`${name}`].toUpperCase();
@@ -22,13 +22,10 @@ const ListChangesContent = (props) => {
                 var textB = b[`${name}`].toUpperCase();
                 return (textA > textB) ? 0 : 1;
             });
-else  return  listFiltered;
+        else
+            return listFiltered;
     }
 
-
-    // return (
-    // <>
-    // const showLists = () => {
 
 
     var listFiltered = data.filter(item => {
@@ -42,26 +39,14 @@ else  return  listFiltered;
     })
 
     // check asc or desc
-    var finalListAfterSortAndFilter= getDescAndAscList('changer_name', 'name', listFiltered)
-     finalListAfterSortAndFilter= getDescAndAscList('title', 'title', listFiltered)
-     finalListAfterSortAndFilter= getDescAndAscList('field', 'field', listFiltered)
-     finalListAfterSortAndFilter= getDescAndAscList('date', 'date', listFiltered)
-     finalListAfterSortAndFilter= getDescAndAscList('next_field', 'next_field', listFiltered)
-     finalListAfterSortAndFilter= getDescAndAscList('old_field', 'old_field', listFiltered)
-  console.log('finalListAfterSortAndFilter')
-  console.log(finalListAfterSortAndFilter)
-    // else {
-    // console.log('step3')
-    // listFiltered = listFiltered.sort(function (a, b) {
-    //     var textA = a.changer_name.toUpperCase();
-    //     var textB = b.changer_name.toUpperCase();
-    //     return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-    // });
-
-    // }
+    var finalListAfterSortAndFilter = getDescAndAscList('changer_name', 'name', listFiltered)
+    finalListAfterSortAndFilter = getDescAndAscList('title', 'title', listFiltered)
+    finalListAfterSortAndFilter = getDescAndAscList('field', 'field', listFiltered)
+    finalListAfterSortAndFilter = getDescAndAscList('date', 'date', listFiltered)
+    finalListAfterSortAndFilter = getDescAndAscList('next_field', 'next_field', listFiltered)
+    finalListAfterSortAndFilter = getDescAndAscList('old_field', 'old_field', listFiltered)
 
 
-    // return null
     return (
         <>
             {finalListAfterSortAndFilter?.slice(0, 20).map((item) => {
@@ -80,8 +65,6 @@ else  return  listFiltered;
         </>
     )
 }
-// </>
-// )
 
 
 
