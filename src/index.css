@@ -5,8 +5,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-code {}
-
 .grid {
     display: grid;
 }
@@ -320,4 +318,22 @@ code {}
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+
+/* colors */
+
+.text-gray {
+    color: rgb(238, 238, 238);
+}
+
+.text-red {
+    color: rgb(235, 18, 18);
+}
+
+
+/* bg color */
+
+.bg-none {
+    background-color: none;
 }

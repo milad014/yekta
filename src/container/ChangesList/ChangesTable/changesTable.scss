@@ -9,4 +9,13 @@ table.changes-list-table {
         text-align: right;
         border: 1px solid #ccc;
     }
+    td:not(.except-me),
+    th:not(.except-me):not(.expect-me) {
+        min-width: 140px;
+    }
+}
+
+//  text alignment styles
+.text-center {
+    text-align: center !important;
 }

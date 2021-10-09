@@ -38,6 +38,7 @@ const ChangesTable = props => {
         <div className="flex justify-center ">
             <table className="changes-list-table w-100 padding-md">
                 <tr className="text-blue">
+
                     <th className="cursor-pointer" onClick={(e) => sortByName('changer_name', getNewSortValue('changer_name'))}>
                         { sorts.changer_name === "ASC" ? (<>↑</>) :  sorts.changer_name === "DESC" ?  (<>↓</>) :""}
                         نام تغییر دهنده
@@ -67,10 +68,9 @@ const ChangesTable = props => {
                     { sorts.new_field === "ASC" ? (<>↑</>) :  sorts.new_field === "DESC" ?  (<>↓</>) :""}
                         فیلد جدید
                     </th>
-
+                    <th className="except-me padd padding-x-xs bg-none">منتخب</th>
                 </tr>
                 <ListChangesContent />
-
             </table>
         </div>
     )
