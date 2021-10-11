@@ -20,8 +20,8 @@ if (params.sort_title)
 if (params.sort_field)
     initialState.sorts.field = params.sort_field
 
-if (params.sort_before_field)
-    initialState.sorts.before_field = params.sort_before_field
+if (params.sort_old_field)
+    initialState.sorts.old_field = params.sort_old_field
 
 
 if (params.sort_new_field)

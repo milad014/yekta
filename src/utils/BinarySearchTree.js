@@ -1,6 +1,7 @@
 class Node {
-  constructor(data) {
-    this.data = data;
+  constructor(key, data) {
+    this.key = key;
+    this.value = data;
     this.left = null;
     this.right = null;
   }
@@ -11,26 +12,26 @@ class BinarySearchTree {
     this.root = null;
   }
 
-  add(data) {
+  add(key, data) {
     // debugger;
     const node = this.root;
     if (node === null) {
-      this.root = new Node(data);
+      this.root = new Node(key, data);
       return;
     } else {
       function searchTree(nodes) {
         //nodes equal this.root;
         // debugger;
-        if (data < nodes.data) {
+        if (key < nodes.key) {
           if (nodes.left === null) {
-            nodes.left = new Node(data);
+            nodes.left = new Node(key, data);
             return;
-          } else if (nodes.data !== null) {
+          } else if (nodes.key !== null) {
             return searchTree(nodes.left);
           }
-        } else if (data > nodes.data) {
+        } else if (key > nodes.key) {
           if (nodes.right === null) {
-            nodes.right = new Node(data);
+            nodes.right = new Node(key, data);
             return;
           } else if (nodes.data !== null) {
             return searchTree(nodes.right);
@@ -73,7 +74,7 @@ class BinarySearchTree {
     return current.data;
   }
 
-  remove(data) {
+  remove(key, data) {
     function removeData(nodes, datas) {
       if (nodes === null) {
         return null;
@@ -102,7 +103,21 @@ class BinarySearchTree {
     }
     this.root = removeData(this.root, data);
   }
+  preOrderFindDate(date) {
+    return this.preOrderByDate(this.root, date, []);
+  }
+  preOrderByDate(root, date, objects) {
+    objects = objects || [];
 
+
+    if (root !== null) {
+      if (root.value.date.includes(date))
+        objects.push(root.value)
+      this.preOrderByDate(root.left, date, objects);
+      this.preOrderByDate(root.right, date, objects);
+    }
+    return objects;
+  }
   print() {
     return this.root;
   }

@@ -337,3 +337,14 @@ body {
 .bg-none {
     background-color: none;
 }
+
+
+/* borders */
+
+.no-border {
+    border: 0 !important;
+}
+
+.border-b {
+    border-bottom: 1px solid #ccc;
+}

@@ -6,16 +6,11 @@ import ListChangesContent from './ListChangesContent'
 import { useHistory } from "react-router-dom";
 
 const ChangesTable = props => {
-    // const bst = new BinarySearchTree();
     const { sortByName, sorts } = React.useContext(GlobalContext);
 
     let history = useHistory();
 
 
-    // bst.add('2018/05/09')
-    // bst.add('2018/05/09')
-    // bst.add('2017/05/09')
-    // bst.add('2019/05/09')
 
     const getNewSortValue = (name) => {
         if (history.location.search[`sort_${name}`]) {
@@ -37,6 +32,7 @@ const ChangesTable = props => {
     return (
         <div className="flex justify-center ">
             <table className="changes-list-table w-100 padding-md">
+            <tbody>
                 <tr className="text-blue">
 
                     <th className="cursor-pointer" onClick={(e) => sortByName('changer_name', getNewSortValue('changer_name'))}>
@@ -71,6 +67,7 @@ const ChangesTable = props => {
                     <th className="except-me padd padding-x-xs bg-none">منتخب</th>
                 </tr>
                 <ListChangesContent />
+                </tbody>
             </table>
         </div>
     )

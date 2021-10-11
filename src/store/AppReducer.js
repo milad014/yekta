@@ -7,10 +7,10 @@ const Reducer = (state, action) => {
         case "SET_SORT_BY_NAME":
             state.sorts[`${action['payload'].name}`] = action['payload'].value
 
-            var all_sorts = ['changer_name', 'title', 'field', 'new_field', 'old_field', 'date']
+            var all_sorts = ['changer_name', 'title', 'date','field', 'new_field', 'old_field']
             //    find before sorts
             var before_sorts = all_sorts.filter((item, index) => {
-                return (action['payload'].name != item)
+                return (action['payload'].name !== item)
 
             })
             before_sorts.forEach((item) => {

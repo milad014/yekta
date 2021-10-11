@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+    .wrapper {
+        // padding: 1rem 0;
+    }
+}
+
+@media (max-width:768px) {
+    .wrapper {
+        padding: 2rem;
+        display: flex;
+        overflow: auto;
+    }
+}
