@@ -1,6 +1,7 @@
 import React from 'react'
 import Input from '../../../components/Input'
 import { useHistory } from "react-router-dom";
+import './filters.scss'
 
 import { GlobalContext } from "../../../store/GlobalState";
 
@@ -70,8 +71,8 @@ const Filters = () => {
 
 
     return (
-        <div>
-            <div className="changes-list-filters flex ">
+        <div className="filter margin-top-md">
+            <div className="changes-list-filters mob-flex-col flex ">
                 <Input value={filters.changer_name} handleChange={(e) => { filterByName('changer_name', e.target.value) }} label="نام تغییر دهنده" />
                 <Input value={filters.date} handleChange={(e) => { filterByName('date', e.target.value) }} label="تاریخ" />
                 <Input value={filters.title} handleChange={(e) => { filterByName('title', e.target.value) }} label="نام آگهی" />

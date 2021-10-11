@@ -13,6 +13,10 @@ body {
     display: flex;
 }
 
+.block {
+    display: block;
+}
+
 .padding-xs {
     padding: .25em;
 }
@@ -347,4 +351,20 @@ body {
 
 .border-b {
     border-bottom: 1px solid #ccc;
+}
+
+
+/* flex  */
+
+@media (max-width: 768px) {
+    .mob-flex-col {
+        flex-direction: column;
+    }
+}
+
+
+/* overflows */
+
+.overflow-x-auto {
+    overflow-x: auto;
 }

@@ -1,13 +1,16 @@
-@media (min-width: 768px) {
+@media (max-width:769px) {
     .wrapper {
-        // padding: 1rem 0;
+        padding: 0 2rem;
+        display: flex;
+        overflow: auto;
+        flex-direction: column;
     }
 }
 
-@media (max-width:768px) {
+@media (min-width: 768px) {
     .wrapper {
-        padding: 2rem;
-        display: flex;
-        overflow: auto;
+        .content {
+            padding: 0 4.5rem;
+        }
     }
 }

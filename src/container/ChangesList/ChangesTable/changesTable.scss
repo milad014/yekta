@@ -16,7 +16,9 @@ table.changes-list-table {
     th {
         border: 1px solid #ccc;
         // border-top: 1px solid #ECF0F1;
-        padding: 10px;
+        @media (min-width: 768px) {
+            padding: 10px;
+        }
     }
     td:not(.except-me),
     th:not(.except-me):not(.expect-me) {

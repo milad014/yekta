@@ -6,7 +6,7 @@ const Wrapper = ({ children }) => {
     return (
         <div dir="rtl" className="wrapper">
         <Header/>
-        <div className="content padding-xl">
+        <div className="content ">
             {children}
         </div>
         <Footer/>

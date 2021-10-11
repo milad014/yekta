@@ -30,7 +30,7 @@ const ChangesTable = props => {
     }
 
     return (
-        <div className="flex justify-center ">
+        <div className="flex overflow-x-auto block justify-center ">
             <table className="changes-list-table w-100 padding-md">
             <tbody>
                 <tr className="text-blue">
