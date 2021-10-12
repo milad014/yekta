@@ -19,9 +19,7 @@ const ListChangesContent = () => {
     const getDescAndAscList = (urlName, name, listFiltered) => {
         if (sorts[`${urlName}`] === "ASC") {
             return listFiltered.sort(function (a, b) {
-                // console.log(a[`${name}`])
                 var textA = a[`${name}`]?.toUpperCase();
-
                 var textB = b[`${name}`]?.toUpperCase();
                 return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
             });

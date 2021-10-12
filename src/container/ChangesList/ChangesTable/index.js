@@ -1,6 +1,5 @@
 import React from 'react'
 import './changesTable.scss'
-// import { BinarySearchTree } from '../../../utils/BinarySearchTree';
 import { GlobalContext } from "../../../store/GlobalState";
 import ListChangesContent from './ListChangesContent'
 import { useHistory } from "react-router-dom";

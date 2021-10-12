@@ -5,11 +5,11 @@ const Wrapper = ({ children }) => {
 
     return (
         <div dir="rtl" className="wrapper">
-        <Header/>
-        <div className="content ">
-            {children}
-        </div>
-        <Footer/>
+            <Header />
+            <div className="content ">
+                {children}
+            </div>
+            <Footer />
         </div>
     )
 }
